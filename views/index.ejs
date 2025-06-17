@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('header.ejs') %>
+</head>
+<body>
+    <div class="d-flex">
+        <%- include('sidebar.ejs') %>
+
+        <div class="container mt-5">
+          <h2 class="mb-4">Your Essays:</h2>
+          <% if (title.length === 0) { %>
+            <p class="text-muted">No essays found. <a href="/write">Start writing your first essay!</a></p>
+          <% } %>
+            <% for (let i = 0; i < title.length; i++) { %>
+                <h4 class="mb-4">
+                    <a href="/<%= title[i].toLowerCase().replace(/\s+/g, '-') %>"><%= title[i] %></a>
+                </h4>
+            <% } %>
+        </div>
+    </div>
+
+    <%- include('footer.ejs') %>
+</body>
+</html>
