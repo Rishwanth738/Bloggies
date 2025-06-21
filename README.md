@@ -1,6 +1,7 @@
 # 📝 Blog App
 
-A simple blog application built using **Node.js** and **Express.js**. This app allows users to:
+A simple blog application built using **Node.js** and **Express.js** hosted here: https://bloggies-agom.onrender.com/
+This app allows users to:
 
 - Create blog posts
 - View individual blog entries
